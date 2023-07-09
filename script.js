@@ -18,7 +18,7 @@ function getComputerChoice() {
     return compChoice;
 }
 
-
+// Add logic to display computer's choice and then what you did
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "rock") {
         return "It's a tie!";
@@ -47,6 +47,8 @@ function game(playerSelection) {
     let playWinCount=0;
     let compWinCount=0;
     for (let i = 0; i < 5; i++) {
+
+        // add event listen for buttons for users selection
         let playerSelection = prompt("Enter your choice");
         const computerSelection = getComputerChoice();
         let result=playRound(playerSelection, computerSelection);
@@ -71,3 +73,4 @@ function game(playerSelection) {
 }
 
 game();
+
