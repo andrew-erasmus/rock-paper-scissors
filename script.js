@@ -24,33 +24,49 @@ function playRound(playerSelection, computerSelection) {
         playWinCount++;
         compWinCount++;
         updateImages(playerSelection, computerSelection);
-        //getImage and update score
+        updateResult();
+
     } else if (playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "paper") {
         playWinCount++;
         compWinCount++;
         updateImages(playerSelection, computerSelection);
+        updateResult();
+
     } else if (playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "scissors") {
         playWinCount++;
         compWinCount++;
         updateImages(playerSelection, computerSelection);
+        updateResult();
+
     } else if (playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "scissors") {
         playWinCount++;
         updateImages(playerSelection, computerSelection);
+        updateResult();
+
     } else if (playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "rock") {
         playWinCount++;
         updateImages(playerSelection, computerSelection);
+        updateResult();
+
     } else if (playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "paper") {
         playWinCount++;
         updateImages(playerSelection, computerSelection);
+        updateResult();
+
     } else if (playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "paper") {
         compWinCount++;
         updateImages(playerSelection, computerSelection);
+        updateResult();
+
     } else if (playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "rock") {
         compWinCount++;
         updateImages(playerSelection, computerSelection);
+        updateResult();
+
     } else if (playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "scissors") {
         compWinCount++;
         updateImages(playerSelection, computerSelection);
+        updateResult();
     }
 }
 
@@ -74,6 +90,9 @@ function getImage(option) {
 
 function updateResult() {
     //counts the score
+    const score = document.querySelector('.score-sheet');
+    console.log(score)
+    score.textContent = `${playWinCount} : ${compWinCount}`
 }
 
 
@@ -81,11 +100,8 @@ let playWinCount = 0;
 let compWinCount = 0;
 
 const rock = document.querySelector('#rock');
-console.log(rock);
 const paper = document.querySelector('#paper');
-console.log(paper);
 const scissors = document.querySelector('#scissors');
-console.log(scissors);
 
 
 rock.addEventListener('click', e => {playRound('rock', getComputerChoice()) });

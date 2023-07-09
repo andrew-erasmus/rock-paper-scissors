@@ -103,6 +103,8 @@ button a{
     display: block;
     width: 100px;
     height: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 
