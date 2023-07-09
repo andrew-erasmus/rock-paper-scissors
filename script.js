@@ -76,36 +76,21 @@ function updateResult() {
     //counts the score
 }
 
-function game(playerSelection, computerSelection) {
-
-
-
-    playRound(playerSelection,computerSelection);
-
-    // add event listen for buttons for users selection
-
-    //UPDATE SCORE WITH RESULT
-
-    if (playWinCount === compWinCount) {
-        console.log("It's a tie.");
-    } else if (playWinCount > compWinCount) {
-        console.log("Player Wins!");
-    } else {
-        console.log("Computer Wins!");
-    }
-}
 
 let playWinCount = 0;
 let compWinCount = 0;
+
 const rock = document.querySelector('#rock');
+console.log(rock);
 const paper = document.querySelector('#paper');
+console.log(paper);
 const scissors = document.querySelector('#scissors');
-const computerSelection = getComputerChoice();
+console.log(scissors);
 
-rock.addEventListener('click', game('rock', computerSelection));
-paper.addEventListener('click', game('paper', computerSelection));
-scissors.addEventListener('click', game('scissors', computerSelection));
 
-// FOR SOME REASON CLICKS WITHOUT CLICKING -- CHECK EVENT LISTENERS
+rock.addEventListener('click', e => {playRound('rock', getComputerChoice()) });
+paper.addEventListener('click', e => {playRound('paper', getComputerChoice())});
+scissors.addEventListener('click', e => {playRound('scissors', getComputerChoice())});
+
 
 
