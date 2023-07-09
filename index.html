@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Rock, Paper, Scissors!</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    
 
-    <body>
-        <header>
-            <h1>Rock, Paper, Scissors</h1>
-            <p>Select your choice to play a round, best of 5 rounds wins!</p>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <title>Rock, Paper, Scissors!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-        <content>
-            <div class="container">
-                <!-- Players choices -->
-                <div class="choice rock"><img src="./images/rock.png"></div>
-                <div class="choice paper"><img src="./images/paper.png"></div>
-                <div class="choice scissors"><img src="./images/scissors.png"></div>
-            </div>
 
-            <h2>VS</h2>
+<body>
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Select your choice to play a round, best of 5 rounds wins!</p>
+    </header>
 
-            <div class="container">
-                <!-- Computer Choice -->
-                <div class="choice"></div>
-            </div>
+    <content>
 
-            <score>
-                <!-- Scoring system -->
-                <h2>Player</h2>
-                <div class="score">
-                    <!-- score : score -->
-                    <!-- use variables here -->
-                </div>
-                <h2>Computer</h2>
-            </score>
+        <div class="container">
+            <!-- Players choices -->
+            <div class="choice rock"><img src="./images/rock.png"></div>
+            <div class="choice paper"><img src="./images/paper.png"></div>
+            <div class="choice scissors"><img src="./images/scissors.png"></div>
+        </div>
 
-            <button>Reset</button>
+        <h2>VS</h2>
 
-            <script src = "script.js"></script>
-        </content>
-        <footer>
-            <!-- Ownership of project -->
-            <p>© andrew-erasmus - GitHub 2023</p>
-        </footer>
-    </body>
+        <div class="container">
+            <!-- Computer Choice -->
+            <div class="choice"></div>
+        </div>
 
-    
+
+
+        <button>Reset</button>
+
+        <script src="script.js"></script>
+    </content>
+    <score>
+        <!-- Scoring system -->
+        <div class="score-container">
+            <p>Player</p>
+            <p>0 : 0</p>
+            <p>Computer</p>
+        </div>
+    </score>
+    <footer>
+        <!-- Ownership of project -->
+        <p>© andrew-erasmus - GitHub 2023</p>
+    </footer>
+</body>
+
+
 </html>
