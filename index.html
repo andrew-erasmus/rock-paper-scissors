@@ -3,21 +3,48 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock, Paper, Scissors!</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     
 
     <body>
         <header>
             <h1>Rock, Paper, Scissors</h1>
-            <h2>Please view the console to see the results of the game until further notice.</h2>
+            <p>Select your choice to play a round, best of 5 rounds wins!</p>
         </header>
 
-        <content>
+        <body>
+            <container>
+                <!-- Players choices -->
+                <div class="choice rock"></div>
+                <div class="choice paper"></div>
+                <div class="choice scissors"></div>
+            </container>
+
+            <h2>VS</h2>
+
+            <container>
+                <!-- Computer Choice -->
+                <div class="choice computer"></div>
+            </container>
+
+            <score>
+                <!-- Scoring system -->
+                <h2>Player</h2>
+                <div class="score">
+                    <!-- score : score -->
+                    <!-- use variables here -->
+                </div>
+                <h2>Computer</h2>
+            </score>
+
+            <button>Reset</button>
             <script src = "script.js"></script>
-        </content>
+        </body>
 
         <footer>
-
+            <!-- Ownership of project -->
+            <p>© andrew-erasmus - GitHub 2023</p>
         </footer>
     </body>
 
