@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Rock, Paper, Scissors!</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/rock.png">
 </head>
 
 
@@ -15,7 +16,6 @@
     </header>
 
     <content>
-        <!-- ADD BUTTON LOGIC FOR PLAYER -->
         <div class="container">
             <!-- Players choices -->
             <div id="rock" class="choice rock"><img src="./images/rock.png"></div>
@@ -35,10 +35,12 @@
 
 
 
-        <button><a href="index.html"><strong>Reset</strong></a></button>
+        <button id="reset"><a href="index.html"><strong>Reset</strong></a></button>
 
-        <script src="script.js"></script>
+
+        
     </content>
+
     <score>
         <!-- Scoring system -->
         <div class="score-container">
@@ -47,10 +49,25 @@
             <p>Computer</p>
         </div>
     </score>
+
+    <!-- End game pop up screen -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Game Over!</div>
+            <a class="close-button">&times;</a>
+        </div>
+        <div class="modal-body">
+            <!-- Changes depending on whether you win or you lose -->
+            <p class="end-text"></p>
+        </div>
+    </div>
+    <div id="overlay"></div>
     <footer>
         <!-- Ownership of project -->
         <p>© andrew-erasmus - GitHub 2023</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 
